@@ -1,13 +1,15 @@
-Этот проект представляет собой настроенный стек мониторинга инфраструктуры на базе Docker. Он позволяет собирать метрики системы в реальном времени и визуализировать их с помощью готовых дашбордов.
+# Monitoring Stack: Prometheus + Grafana
 
-Установка и запуск:
-1. git clone https://github.com/clownmeowops/Prometheus-Grafana
-   cd "Prometheus + Grafana"
-2. docker-compose up -d
+Готовый стек для мониторинга IT-инфраструктуры в Docker. Позволяет собирать системные метрики и визуализировать их в реальном времени.
 
-3. Grafana: доступна по адресу http://localhost:3000 (стандартный логин/пароль: admin / admin).
-   Prometheus: доступен по адресу http://localhost:9090
+## Быстрый запуск
 
-Настройка:
-В Grafana добавь новый Data Source типа Prometheus с URL http://prometheus:9090.
-Импортируй дашборд с ID 1860 (Node Exporter Full) для отображения метрик.
+Мы автоматизировали развертывание, чтобы вам не пришлось настраивать всё вручную.
+
+**Windows:**
+Запустите файл `setup.bat`. Он создаст необходимые директории и поднимет все контейнеры.
+
+**Linux / macOS:**
+```bash
+chmod +x setup.sh
+./setup.sh
